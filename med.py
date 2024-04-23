@@ -32,4 +32,4 @@ if submitted:
         output = model.predict(input_data)
 
         # Display prediction
-        st.write(f"The predicted medical cost is: {float(output[0])}")
+        st.write(f"The predicted medical cost is: {output[0]:0.2f} $")
