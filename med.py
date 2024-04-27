@@ -8,7 +8,7 @@ def format_output(cost):
 # Main header with logo and colored title
 col1, col2 = st.columns([1, 5])
 with col1:
-    st.image("https://cdn4.iconfinder.com/data/icons/business-cost-1/64/medical-cost-health-care-hospital-1024.png", width=100)  # Replace "logo.png" with the path to your logo image
+    st.image("https://cdn4.iconfinder.com/data/icons/business-cost/64/medical-cost-health-care-hospital-512.png", width=100)  # Replace "logo.png" with the path to your logo image
 with col2:
     st.markdown("<h1 style='text-align: left; color: #2980B9;'>Medical Cost Prediction</h1>", unsafe_allow_html=True)
 
@@ -20,21 +20,15 @@ st.markdown(
         body {
             background-color: #f2f2f2;
         }
-        .input-container {
-            background-color: #f5f5f5;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-        .prediction {
+        .input-container, .prediction {
             background-color: #e6f7ff;
             padding: 20px;
             border-radius: 10px;
             margin-top: 20px;
-            color: black; /* Set text color to black */
+            color: #2980B9; /* Set text color to blue */
         }
-        .prediction h3 {
-            color: black; /* Set title color to black */
+        .input-container h2, .prediction h3 {
+            color: #2980B9; /* Set title color to blue */
         }
         .footer {
             margin-top: 20px;
