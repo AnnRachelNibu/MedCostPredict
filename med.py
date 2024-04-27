@@ -20,10 +20,11 @@ st.markdown(
         body {
             background-color: #f2f2f2;
         }
-        .sidebar {
+        .input-container {
             background-color: #f5f5f5;
             padding: 20px;
             border-radius: 10px;
+            margin-top: 20px;
         }
         .prediction {
             background-color: #e6f7ff;
@@ -41,10 +42,10 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Sidebar for input form with colored header
-st.sidebar.markdown("<h2 style='color: #2980B9;'>Input Parameters</h2>", unsafe_allow_html=True)
+# Input form container
+st.markdown("<div class='input-container'><h2 style='color: #2980B9;'>Input Parameters</h2></div>", unsafe_allow_html=True)
 
-with st.sidebar.form("medical_cost_prediction_form"):
+with st.form("medical_cost_prediction_form"):
     age = st.number_input("Age", min_value=0, step=1)
     sex = st.selectbox("Sex", ["Male", "Female"])
     bmi = st.number_input("BMI", min_value=0.0, step=0.1)
@@ -55,8 +56,6 @@ with st.sidebar.form("medical_cost_prediction_form"):
     submitted = st.form_submit_button("Predict Medical Cost")
 
 # Main content area
-st.sidebar.header("")
-
 if submitted:
     if age != 0 and bmi != 0.0:
         # Convert input values to appropriate format
