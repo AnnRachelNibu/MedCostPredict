@@ -52,7 +52,7 @@ with st.sidebar.form("medical_cost_prediction_form"):
     smoker = st.selectbox("Smoker", ["Yes", "No"])
     region = st.selectbox("Region", ["Southwest", "Southeast", "Northwest", "Northeast"])
 
-    submitted = st.form_submit_button("Predict Medical Cost")
+    submitted = st.form_submit_button("")
 
 # Main content area
 st.sidebar.header("")
