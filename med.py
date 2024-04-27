@@ -31,6 +31,7 @@ st.markdown(
             padding: 20px;
             border-radius: 10px;
             margin-top: 20px;
+            color: black; /* Set text color to black */
         }
         .footer {
             margin-top: 20px;
