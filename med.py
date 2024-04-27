@@ -3,7 +3,7 @@ import pickle
 
 # Function to format predicted medical cost
 def format_output(cost):
-    return f"${cost:.2f}"
+    return f"Predicted Medical Cost: ${cost:.2f}"
 
 # Main header with logo and colored title
 col1, col2 = st.columns([1, 5])
@@ -18,6 +18,9 @@ st.markdown(
     """
     <style>
         /* Add custom CSS styles */
+        body {
+            background-color: #f2f2f2;
+        }
         .sidebar {
             background-color: #f5f5f5;
             padding: 20px;
@@ -68,8 +71,7 @@ if submitted:
         # Make prediction
         output = model.predict(input_data)
 
-     
-        # Display prediction
+        n
         st.write(f"The predicted medical cost is: {output[0]:0.2f} $")
     else:
         st.error("Please enter all input parameters.")
