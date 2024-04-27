@@ -52,7 +52,7 @@ with st.sidebar.form("medical_cost_prediction_form"):
     smoker = st.selectbox("Smoker", ["Yes", "No"])
     region = st.selectbox("Region", ["Southwest", "Southeast", "Northwest", "Northeast"])
 
-    submitted = st.form_submit_button("")
+    submitted = st.form_submit_button("Predict Medical Cost")
 
 # Main content area
 st.sidebar.header("")
@@ -80,3 +80,4 @@ if submitted:
         st.markdown("<div class='prediction'><h3>Prediction Result</h3><p>" + format_output(output[0]) + "</p></div>", unsafe_allow_html=True)
     else:
         st.error("Please enter all input parameters.")
+
