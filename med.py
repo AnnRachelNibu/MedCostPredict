@@ -33,6 +33,9 @@ st.markdown(
             margin-top: 20px;
             color: black; /* Set text color to black */
         }
+        .prediction h3 {
+            color: black; /* Set title color to black */
+        }
         .footer {
             margin-top: 20px;
             font-size: 14px;
