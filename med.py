@@ -77,6 +77,6 @@ if submitted:
         output = model.predict(input_data)
 
         # Display prediction
-        st.markdown("<div class='prediction'><h3>Prediction Result</h3><p>This is a prediction app used to predict medical cost.</p><p>" + format_output(output[0]) + "</p></div>", unsafe_allow_html=True)
+        st.markdown("<div class='prediction'><h3>Prediction Result</h3><p>" + format_output(output[0]) + "</p></div>", unsafe_allow_html=True)
     else:
         st.error("Please enter all input parameters.")
