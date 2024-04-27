@@ -10,7 +10,6 @@ col1, col2 = st.columns([1, 5])
 with col1:
     st.image("https://cdn4.iconfinder.com/data/icons/business-cost-1/64/medical-cost-health-care-hospital-1024.png", width=100)  # Replace "logo.png" with the path to your logo image
 with col2:
-    st.title("Medical Cost Prediction")
     st.markdown("<h1 style='text-align: left; color: #2980B9;'>Medical Cost Prediction</h1>", unsafe_allow_html=True)
 
 # Add custom CSS styles
@@ -25,6 +24,12 @@ st.markdown(
             background-color: #f5f5f5;
             padding: 20px;
             border-radius: 10px;
+        }
+        .prediction {
+            background-color: #e6f7ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
         }
         .footer {
             margin-top: 20px;
@@ -71,7 +76,7 @@ if submitted:
         # Make prediction
         output = model.predict(input_data)
 
-        n
-        st.write(f"The predicted medical cost is: {output[0]:0.2f} $")
+        # Display prediction
+        st.markdown("<div class='prediction'><h3>Prediction Result</h3><p>This is a prediction app used to predict medical cost.</p><p>" + format_output(output[0]) + "</p></div>", unsafe_allow_html=True)
     else:
         st.error("Please enter all input parameters.")
